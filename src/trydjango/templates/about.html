@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+    {% block content %}
+        <h1> Welcome to about section </h1>
+        <p>
+            My name : {{ name }}
+         </p>
+         <p> {{ about }} </p>
+         <p> My projects </p>
+         <ul>
+            {% for project in projects %}
+                <li> 
+                   {% if project == 'boma' %}
+                        {{forloop.counter}}  {{ project|add:' of Africa'}}
+                    {%else%}
+                    {{forloop.counter}} {{ project }}
+                   {%endif%}
+                   
+                </li>
+            {% endfor%}
+         </ul>
+    {% endblock content %}

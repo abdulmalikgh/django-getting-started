@@ -1,0 +1,16 @@
+<!doctype html>
+    <html>
+        <head> 
+            <title> Welcome to django </title>
+        </head>
+
+        <body>
+            
+           {% include 'navbar.html' %}
+
+            {% block content %}
+                relplace content here
+            {% endblock content %}
+
+        </body>
+    </html>
